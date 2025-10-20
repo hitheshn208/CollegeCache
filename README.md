@@ -1,14 +1,14 @@
 # CollegeCache
 
-Welcome to **CollegeCache** — a collection of all my **college programs, lab codes, and practice scripts**.  
+Welcome to **CollegeCache** — a collection of my college programs, lab codes, and practice scripts.  
 
 ---
 
-## 📁 Contents
+## Quick overview
 
-| **/ClassPrograms** | Daily classroom examples, small exercises, and notes 📝 |
-| **/LabCodes** | Official lab programs and experiments 🔬 |
-| **/Extras** | Random experiments, test files, or extra practice stuff 😅 |
+- A lightweight repo for storing classroom programs, lab experiments, and small practice projects.
+- Browse by folder to find code examples, lab reports, and extra experiments.
+- Meant for learning and reference — not production-ready projects.
 
 ---
 
