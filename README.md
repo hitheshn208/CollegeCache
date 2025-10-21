@@ -7,7 +7,7 @@ Welcome to **CollegeCache** — a collection of my college programs, lab codes, 
 ## Quick overview
 
 - A lightweight repo for storing classroom programs, lab experiments, and small practice projects.
-- Browse by folder to find code examples, lab reports, and extra experiments.
+- Browse by folder to find code examples, lab programs, and extra experiments.
 - Meant for learning and reference — not production-ready projects.
 
 ---
