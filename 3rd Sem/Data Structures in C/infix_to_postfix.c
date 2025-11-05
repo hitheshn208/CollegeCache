@@ -82,7 +82,8 @@ int main()
 {
     printf("Enter the infix expression : ");
     scanf("%s", expr);
+    printf("Postfix expression is : ");
     postfix();
-
+    printf("\n");
     return 0;
 }
