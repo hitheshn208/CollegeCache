@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #define MAX 20
 
-typedef enum {rparen, operand, eos, operator} precedence;
+typedef enum {rparen, operand, eos, operator} typeofchar;
 char stack[MAX];
 int top = -1;
 char expr[MAX];
@@ -36,7 +36,7 @@ int precedenceChecker(char op)
     }
 }
 
-precedence getToken(char *symbol, int *n)
+typeofchar getToken(char *symbol, int *n)
 {
     *symbol = expr[(*n)++];
 
@@ -58,7 +58,7 @@ void postfix()
 {
     char symbol;
     int n = 0 ;
-    precedence token = getToken(&symbol, &n);
+    typeofchar token = getToken(&symbol, &n);
 
     while(token != eos)
     {
