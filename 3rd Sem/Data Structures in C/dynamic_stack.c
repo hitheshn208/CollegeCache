@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MALLOC(pointer) (pointer*)malloc(1*sizeof(pointer));
-// #define REALLOC(pointer,size) 
 
 typedef struct 
 {
@@ -12,7 +11,8 @@ void push(stackStructure stack[], int *top, int *capacity)
 {
     if(*top == *capacity-1)
     {
-        stack = (stackStructure*)realloc(stack, sizeof(stackStructure));
+        stack = (stackStructure*)realloc(stack, 2*(*capacity)*sizeof(stackStructure));
+        printf("Increased the capacity\n");
         (*capacity) *= 2;
     }
 
@@ -28,7 +28,6 @@ void pop(int *top)
     if(*top == -1)
     {
         printf("Stack is Empty\n");
-        printf("Address of top : %d \n", top);
         return;
     }
 
@@ -94,8 +93,9 @@ int main()
                     break;
 
             case 4: 
-                    toExit = 1;
-                    break;
+                    free(stack);
+                    printf("Freed stack and terminating program")
+                    return 0;
 
             default : printf("Invalid input\n");
         }
