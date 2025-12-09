@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 20
-char stack[MAX];
+int stack[MAX];
 int top = -1;
 char expr[MAX];
 typedef enum {lparen, rparen, add, sub, divide, mul, mod, operand, eos} precedence;
@@ -100,5 +100,4 @@ int main()
     printf("Enter the postfix expression : ");
     scanf("%s", expr);
     printf("The solution of the postfix expression is : %d", evaluate());
-
 }
