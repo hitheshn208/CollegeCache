@@ -30,7 +30,7 @@ void createNewQueue()
         else
         {
                 copy(start, capacity, newQueue, 0);
-                copy(0, rear+1, newQueue, start-capacity+1);
+                copy(0, rear+1, newQueue, capacity-start+1);
         }
 
         rear = capacity - 1;
