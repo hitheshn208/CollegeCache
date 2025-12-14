@@ -1,0 +1,20 @@
+input 
+store x
+
+input 
+store y
+
+load x
+subt y
+skipCond 800
+jump y_greater
+load x
+Output
+Halt
+
+y_greater, load y
+output 
+Halt
+
+x, dec 0
+y, dec 0
