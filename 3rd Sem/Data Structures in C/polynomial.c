@@ -85,7 +85,7 @@ int main()
     printf("Enter the number of terms in 2nd polynomial: ");
     scanf("%d", &nb);
     printf("Enter the coefficient and exponent\n");
-    for(int i=0; i<nb; i++)
+    for(int i=sb; i<(na+nb); i++)
     {
         scanf("%f %d", &bc, &be);
         attach(bc, be);
