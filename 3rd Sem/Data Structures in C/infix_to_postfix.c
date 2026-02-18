@@ -77,12 +77,9 @@ void postfix()
         else
         {
             /*If the precedence of the operator in stack is greater than the operator to be pushed then, pop the stack until the operator in stack has less precedence or the stack is empty*/
-            while( precedenceChecker(symbol) <= precedenceChecker(stack[top]) && stack[top]!='(' )
+            while( precedenceChecker(symbol) <= precedenceChecker(stack[top]) && stack[top]!='(' && top !=-1)
             {
                 printf("%c", pop());
-
-                if(top == -1)
-                    break;
             }
             push(symbol);
 

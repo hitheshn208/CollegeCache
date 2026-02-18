@@ -1,4 +1,10 @@
 *.exe
 *.class
 test*
-./Object Oriented Programming Using Java/swingpractise
+Object Oriented Programming Using Java/swingpractise/
+*.mpf
+*.cr.mti
+*.vhd.bak
+transcript
+*.wlf
+DDCO/Model Sim/work/

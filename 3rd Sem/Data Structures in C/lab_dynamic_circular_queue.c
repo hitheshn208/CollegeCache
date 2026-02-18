@@ -5,7 +5,6 @@
 typedef struct
 {
         int data;
-
 }Queue_structure;
 
 Queue_structure* queue;
@@ -14,9 +13,7 @@ int capacity = 3,front = 0, rear = 0;
 void copy(int startpos, int endpos, Queue_structure newQueue[], int newstart)
 {
         for(int i = startpos, j = newstart; i<endpos; i++,j++)
-        {
                 newQueue[j].data = queue[i].data;
-        }
 }
 
 void createNewQueue()
@@ -30,7 +27,7 @@ void createNewQueue()
         else
         {
                 copy(start, capacity, newQueue, 0);
-                copy(0, rear+1, newQueue, capacity-start+1);
+                copy(0, rear, newQueue, capacity-start);
         }
 
         rear = capacity - 1;

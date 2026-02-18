@@ -56,9 +56,18 @@ int deleteq() {
 void addEdge(int u, int v) {
     nodePointer temp = (nodePointer)malloc(sizeof(node));
     temp->vertex = v;
-    temp->link = graph[u];
-    graph[u] = temp;
+    temp->link = NULL;
+
+    if (graph[u] == NULL) {
+        graph[u] = temp;
+    } else {
+        nodePointer p = graph[u];
+        while (p->link != NULL)
+            p = p->link;
+        p->link = temp;
+    }
 }
+
 
 /* ---------- DFS ---------- */
 void dfs(int v) {
@@ -104,7 +113,7 @@ int main() {
     for (int i = 0; i <= n; i++) {
         graph[i] = NULL;
         visited[i] = FALSE;
-    }
+    }+
 
     printf("Enter number of edges: ");
     scanf("%d", &e);
