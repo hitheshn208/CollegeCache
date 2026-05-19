@@ -17,36 +17,66 @@ class quickSort
 		quicksort(0, arr.length-1);
         }
 
+	// void quicksort(int low, int high)
+	// {
+	// 	if(low > high) return;
+
+	// 	int pivot = arr[low];
+	// 	int i = low+1;
+	// 	int j = high;
+
+	// 	while(i <= j)
+	// 	{
+	// 		while( i<=high && arr[i] < pivot)
+	// 			i++;
+	// 		while( j>low && arr[j] > pivot)
+	// 			j--;
+
+	// 		if( i < j )
+	// 		{
+	// 			int temp = arr[i];
+	// 			arr[i] = arr[j];
+	// 			arr[j] = temp;
+	// 		}
+	// 	}
+
+	// 	int temp = arr[low];
+	// 	arr[low] = arr[j];
+	// 	arr[j] = temp;
+
+	// 	quicksort(low, j-1);
+	// 	quicksort(j+1, high);
+	// }
+
 	void quicksort(int low, int high)
 	{
 		if(low > high) return;
 
-		int pivot = arr[low];
+		int pivot = low;
 		int i = low+1;
 		int j = high;
 
-		while(i <= j)
+		while( i <= j)
 		{
-			while( i<=high && arr[i] < pivot)
+			while(i <= high && arr[pivot] > arr[i] )
 				i++;
-			while( j>low && arr[j] > pivot)
+			while(j > low && arr[pivot] < arr[j])
 				j--;
 
-			if( i < j )
+			if(i<j)
 			{
 				int temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
 			}
 		}
-
-		int temp = arr[low];
-		arr[low] = arr[j];
-		arr[j] = temp;
+		int temp = arr[j];
+		arr[j] = arr[pivot];
+		arr[pivot] = temp;
 
 		quicksort(low, j-1);
 		quicksort(j+1, high);
-	}
+	}		
 
 	void display()
 	{
